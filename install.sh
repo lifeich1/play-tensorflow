@@ -1,9 +1,10 @@
 #!/bin/bash
 
 if [ ! -d ./env ]; then
-    virtualenv -p python2.7 --system-site-packages ./env
+    virtualenv -p python3.5 ./env
 fi
 
 source ./env/bin/activate
-pip install --upgrade \
-    https://storage.googleapis.com/tensorflow/mac/tensorflow-0.5.0-py2-none-any.whl
+pip install --upgrade pip
+pip install --upgrade tensorflow
+pip install --upgrade matplotlib
